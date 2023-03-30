@@ -40,39 +40,45 @@
           </div>
         </div>
         <div>
-          <form>
+          <form id="login">
             <div>
-              <input type="text" placeholder="Full Name" />
+              <input name="name" type="text" placeholder="Full Name" />
             </div>
             <div>
-              <input type="email" placeholder="Email" />
+              <input name="email" type="email" placeholder="Email" />
             </div>
             <div class="toggleable-password">
-              <input type="password" placeholder="Password" />
+              <input name="password" type="password" placeholder="Password" />
               <button>
                 <img src="/assets/eye.png" />
               </button>
             </div>
             <div class="toggleable-password">
-              <input type="password" placeholder="Confirm Password" />
+              <input
+                name="password"
+                type="password"
+                placeholder="Confirm Password"
+              />
               <button>
                 <img src="/assets/eye.png" />
               </button>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" />
+                <input name="checkBox" type="checkbox" />
                 <span class="checkmarking"></span>
                 Accept terms and condition
               </label>
             </div>
-            <div class="submit">
-              <a href="/signin.html">Sign Up</a>
+            <div id="buttonWrapper" class="submit">
+              <button type="submit">Sign Up</button>
+              <!-- <a href="/signin.html">Sign Up</a> -->
             </div>
           </form>
         </div>
       </div>
       <div></div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

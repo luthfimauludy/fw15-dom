@@ -37,15 +37,16 @@
           <div class="desc">Hi, Welcome back to Urticket!</div>
         </div>
         <div>
-          <form>
+          <form id="login" method="get">
+            <div id="alert"></div>
             <div>
-              <input type="text" placeholder="Username" />
+              <input name="username" type="text" placeholder="Username" />
             </div>
             <div>
-              <input type="email" placeholder="Email" />
+              <input name="email" type="email" placeholder="Email" />
             </div>
             <div class="toggleable-password">
-              <input type="password" placeholder="Password" />
+              <input name="password" type="password" placeholder="Password" />
               <button>
                 <img src="/assets/eye.png" />
               </button>
@@ -53,8 +54,8 @@
             <div class="forgot-password">
               <a href="/forgot-password.html">Forgot Password?</a>
             </div>
-            <div class="submit">
-              <a href="/index.html">Sign In</a>
+            <div id="buttonWrapper" class="submit">
+              <button type="submit" formaction="/index.html">Sign In</button>
             </div>
           </form>
         </div>
@@ -80,5 +81,6 @@
       </div>
       <div></div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
