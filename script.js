@@ -1,10 +1,4 @@
-const formLogin = document.getElementById("login");
-const formSignUp = document.getElementById("signup");
-const textAlert = document.getElementById("alert");
-const formUsername = document.getElementById("username");
-const formEmail = document.getElementById("email");
-const formPassword = document.getElementById("password");
-const formConfirmPassword = document.getElementById("confirmPassword");
+// const formName = document.getElementById("name");
 
 // formName.addEventListener("keyup", function (event) {
 //   if (event.target.value === "") {
@@ -18,6 +12,8 @@ const formConfirmPassword = document.getElementById("confirmPassword");
 //   }
 // });
 
+const formUsername = document.getElementById("username");
+
 formUsername.addEventListener("keyup", function (event) {
   if (event.target.value === "") {
     document.getElementById("username").style.borderColor = "#c1c5d0";
@@ -29,6 +25,8 @@ formUsername.addEventListener("keyup", function (event) {
     }
   }
 });
+
+const formEmail = document.getElementById("email");
 
 formEmail.addEventListener("keyup", function (event) {
   if (event.target.value === "") {
@@ -42,6 +40,8 @@ formEmail.addEventListener("keyup", function (event) {
   }
 });
 
+const formPassword = document.getElementById("password");
+
 formPassword.addEventListener("keyup", function (event) {
   if (event.target.value === "") {
     document.getElementById("password").style.borderColor = "#c1c5d0";
@@ -54,6 +54,8 @@ formPassword.addEventListener("keyup", function (event) {
   }
 });
 
+const formConfirmPassword = document.getElementById("confirmPassword");
+
 formConfirmPassword.addEventListener("keyup", function (event) {
   if (event.target.value === "") {
     document.getElementById("confirmPassword").style.borderColor = "#c1c5d0";
@@ -63,6 +65,9 @@ formConfirmPassword.addEventListener("keyup", function (event) {
     document.getElementById("confirmPassword").style.borderColor = "green";
   }
 });
+
+const formLogin = document.getElementById("login");
+const textAlert = document.getElementById("alert");
 
 formLogin.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -82,6 +87,8 @@ formLogin.addEventListener("submit", function (event) {
   }
 });
 
+const formSignUp = document.getElementById("signup");
+
 formSignUp.addEventListener("submit", function (event) {
   event.preventDefault();
   const username = event.target.username.value;
@@ -99,5 +106,17 @@ formSignUp.addEventListener("submit", function (event) {
     document.getElementById("alert").style.color = "red";
     textAlert.innerText = "Login Failed!";
     formSignUp.reset();
+  }
+});
+
+const menu = document.getElementById("menu");
+const btnToggler = document.getElementById("btn-toggler");
+
+btnToggler.addEventListener("click", function () {
+  const token = menu.classList;
+  if (token.contains("hidden")) {
+    token.remove("hidden");
+  } else {
+    token.add("hidden");
   }
 });

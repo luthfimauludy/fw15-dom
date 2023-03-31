@@ -53,20 +53,30 @@
     </style>
   </head>
   <body>
-    <header class="flex h-[720px] flex-col">
+    <header class="flex max-h-[720px] flex-col">
       <!-- Navbar Start -->
       <nav class="flex md:flex-row flex-col md:h-24 px-8 font-semibold">
-        <div class="flex justify-center items-center text-2xl">
-          <img src="/assets/logo.png" alt="logo" />
-          <div class="text-2xl">
-            <a href="/index.html">
-              <span class="text-[#61764B]">We</span
-              ><span class="text-[#FF3D71]">tick</span>
-            </a>
+        <div class="flex md:justify-center justify-between items-center">
+          <div class="flex justify-center items-center text-2xl">
+            <img src="/assets/logo.png" alt="logo" />
+            <div class="text-2xl">
+              <a href="/index.html">
+                <span class="text-[#61764B]">We</span
+                ><span class="text-[#FF3D71]">tick</span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="md:hidden flex items-center border rounded-lg p-1 bg-[#61764B]"
+          >
+            <button id="btn-toggler">
+              <i class="text-white" data-feather="menu"></i>
+            </button>
           </div>
         </div>
         <div
-          class="flex md:flex-row flex-col flex-1 md:pl-8 mb-5 md:mb-0 text-sm"
+          id="menu"
+          class="hidden md:flex md:flex-row flex-col flex-1 md:pl-8 mb-5 md:mb-0 text-sm"
         >
           <ul class="flex justify-center md:flex-row flex-col flex-1 gap-3">
             <li class="flex justify-center items-center min-w-[100px]">
@@ -114,9 +124,9 @@
       <!-- Navbar End -->
       <!-- Banner Start -->
       <section
-        class="flex md:flex-row flex-col md:px-24 py-10 items-center flex-1 bg-[#61764B] bg-cover bg-no-repeat bg-[url(/assets/accent-heading.png)]"
+        class="flex md:flex-row flex-col md:px-24 py-10 items-center md:flex-1 bg-[#61764B] bg-cover bg-no-repeat bg-[url(/assets/accent-heading.png)]"
       >
-        <div class="flex-1 flex flex-col md:items-start items-center gap-5">
+        <div class="md:flex-1 flex flex-col md:items-start items-center gap-5">
           <p
             class="text-xl md:text-5xl md:text-left text-center tracking-widest font-semibold max-w-[200px] md:max-w-[500px] text-white"
           >
@@ -625,7 +635,7 @@
           </div>
         </div>
       </section>
-      <section class="overflow-x-scroll gap-5 my-5 mb-24">
+      <section class="md:overflow-x-hidden overflow-x-scroll gap-5 my-5 mb-24">
         <div class="flex md:justify-center items-center gap-5 mx-5 md:mx-0">
           <div class="hidden md:block">
             <button
@@ -948,6 +958,7 @@
       </div>
     </footer>
     <!-- Footer End -->
+    <script src="script.js"></script>
     <script>
       feather.replace();
     </script>
