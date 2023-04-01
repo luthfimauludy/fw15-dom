@@ -35,17 +35,21 @@
         margin: 50px 120px 100px;
         background: white;
         border-radius: 20px;
-        padding: 70px 101px 67px 4px;
+        padding: 70px 50px 67px 50px;
       }
 
       /* Banner */
       .banner {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
       }
 
       /* Ticket Price */
+      .ticket-price {
+        min-width: 376px;
+      }
       .header {
         height: 50px;
         display: flex;
@@ -68,6 +72,9 @@
       }
       .byprice > .icon {
         width: 50px;
+      }
+      .ticket-section {
+        width: 100%;
       }
       .reg,
       .vip,
@@ -92,7 +99,7 @@
         height: 45px;
       }
       .box-ticket {
-        min-width: 300px;
+        width: 100%;
       }
       .price-section {
         display: flex;
@@ -182,20 +189,20 @@
           background: white;
         }
         .wrapper {
-          min-width: 320px;
           flex-direction: column;
-          margin: 10px;
-          padding: 0;
+          margin: 0;
+          padding: 10px;
         }
         .banner {
           max-height: 228px;
         }
         .banner > img {
+          max-width: 250px;
           transform: rotate(45deg);
         }
         .ticket-price {
+          min-width: unset;
           margin-bottom: 50px;
-          padding: 10px;
         }
         .header {
           margin-bottom: 20px;
@@ -211,17 +218,15 @@
           min-width: 240px;
         }
         .btn-payment {
-          min-width: 280px;
+          max-width: unset;
         }
       }
     </style>
   </head>
-  <body>
-    <div class="bg">
-      <!-- Navbar Start -->
-      <nav
-        class="flex md:flex-row flex-col md:h-24 px-8 bg-white font-semibold"
-      >
+  <body class="bg">
+    <!-- Navbar Start -->
+    <nav class="flex md:flex-row flex-col md:h-24 px-8 bg-white font-semibold">
+      <div class="flex md:justify-center justify-between items-center">
         <div class="flex justify-center items-center text-2xl">
           <img src="/assets/logo.png" alt="logo" />
           <div class="text-2xl">
@@ -232,283 +237,290 @@
           </div>
         </div>
         <div
-          class="flex md:flex-row flex-col flex-1 md:pl-8 mb-5 md:mb-0 text-sm"
+          class="md:hidden flex items-center border rounded-lg p-1 bg-[#61764B]"
         >
-          <ul class="flex justify-center md:flex-row flex-col flex-1 gap-3">
-            <li class="flex justify-center items-center min-w-[100px]">
-              <a
-                class="text-[#61764B] pb-2.5 border-b border-[#61764B]"
-                href="#home"
-                >Home</a
-              >
-            </li>
-            <li class="flex justify-center items-center min-w-[100px]">
-              <a
-                class="hover:text-[#61764B] pb-2.5 border-b border-transparent hover:border-[#61764B]"
-                href="/create-event.html"
-                >Create Event</a
-              >
-            </li>
-            <li class="flex justify-center items-center min-w-[100px]">
-              <a
-                class="hover:text-[#61764B] pb-2.5 border-b border-transparent hover:border-[#61764B]"
-                href="/event.html"
-                >Location</a
-              >
-            </li>
-          </ul>
+          <button id="btn-toggler">
+            <i class="text-white" data-feather="menu"></i>
+          </button>
+        </div>
+      </div>
+      <div
+        id="menu"
+        class="hidden md:flex md:flex-row flex-col flex-1 md:pl-8 mb-5 md:mb-0 text-sm"
+      >
+        <ul class="flex justify-center md:flex-row flex-col flex-1 gap-3">
+          <li class="flex justify-center items-center min-w-[100px]">
+            <a
+              class="hover:text-[#61764B] pb-2.5 border-b border-transparent hover:border-[#61764B]"
+              href="/index.html"
+              >Home</a
+            >
+          </li>
+          <li class="flex justify-center items-center min-w-[100px]">
+            <a
+              class="hover:text-[#61764B] pb-2.5 border-b border-transparent hover:border-[#61764B]"
+              href="/create-event.html"
+              >Create Event</a
+            >
+          </li>
+          <li class="flex justify-center items-center min-w-[100px]">
+            <a
+              class="hover:text-[#61764B] pb-2.5 border-b border-transparent hover:border-[#61764B]"
+              href="/event.html"
+              >Location</a
+            >
+          </li>
+        </ul>
+        <div
+          class="flex justify-center gap-3 items-center text-sm font-semibold"
+        >
           <div
-            class="flex justify-center gap-3 items-center text-sm font-semibold"
+            class="inline-block rounded-full p-[2px] bg-gradient-to-r from-[#61764B] to-[#A0D995]"
           >
-            <div
-              class="inline-block rounded-full p-[2px] bg-gradient-to-r from-[#61764B] to-[#A0D995]"
-            >
-              <img
-                class="w-11 h-11 object-cover rounded-full border-2 border-white"
-                src="/assets/profile3.jpg"
-                alt="Profile"
-              />
-            </div>
-            <div>
-              <a href="/profile.html">John Tomson</a>
-            </div>
+            <img
+              class="w-11 h-11 object-cover rounded-full border-2 border-white"
+              src="/assets/profile3.jpg"
+              alt="Profile"
+            />
           </div>
-        </div>
-      </nav>
-      <!-- Navbar End -->
-      <!-- Main Content Start -->
-      <div class="wrapper">
-        <div class="banner">
-          <img src="/assets/banner.png" alt="banner" />
-        </div>
-        <div class="ticket-price">
-          <div class="header">
-            <div class="text-header">Tickets</div>
-            <div class="byprice">
-              <p class="text-byprice">BY PRICE</p>
-              <img class="icon" src="/assets/byprice-icon.png" alt="Icon" />
-            </div>
-          </div>
-          <div class="ticket-section">
-            <div class="reg">
-              <div class="box-logo">
-                <div>
-                  <img
-                    class="logo-ticket"
-                    src="/assets/ticket1.png"
-                    alt="Ticket 1"
-                  />
-                </div>
-              </div>
-              <div class="box-ticket">
-                <div class="price-section">
-                  <div class="left-section">
-                    <p class="txt-bold">SECTION REG, ROW 1</p>
-                    <p class="martop-0">12 Seats available</p>
-                  </div>
-                  <div class="right-section">
-                    <p class="txt-bold">$15</p>
-                    <p class="martop-0">per person</p>
-                  </div>
-                </div>
-                <div class="quantity-section">
-                  <div>
-                    <p class="quantity-text">Quantity</p>
-                  </div>
-                  <div class="quantity-button">
-                    <button class="btn border-color-qty">-</button>
-                    <p class="marleft-2">0</p>
-                    <button class="marleft-2 btn border-color-qty">+</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="vip">
-              <div class="box-logo">
-                <div>
-                  <img
-                    class="logo-ticket"
-                    src="/assets/ticket2.png"
-                    alt="Ticket 2"
-                  />
-                </div>
-              </div>
-              <div class="box-ticket">
-                <div class="price-section">
-                  <div class="left-section">
-                    <p class="txt-bold">SECTION VIP, ROW 2</p>
-                    <p class="martop-0">9 Seats available</p>
-                  </div>
-                  <div class="right-section">
-                    <p class="txt-bold">$35</p>
-                    <p class="martop-0">per person</p>
-                  </div>
-                </div>
-                <div class="quantity-section">
-                  <div>
-                    <p class="quantity-text">Quantity</p>
-                  </div>
-                  <div class="quantity-button">
-                    <button class="btn border-color-qty">-</button>
-                    <p class="marleft-2">2</p>
-                    <button class="marleft-2 btn">+</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="vvip">
-              <div class="box-logo">
-                <div>
-                  <img
-                    class="logo-ticket"
-                    src="/assets/ticket3.png"
-                    alt="Ticket 3"
-                  />
-                </div>
-              </div>
-              <div class="box-ticket">
-                <div class="price-section">
-                  <div class="left-section">
-                    <p class="txt-bold">SECTION VVIP, ROW 3</p>
-                    <p class="martop-0">6 Seats available</p>
-                  </div>
-                  <div class="right-section">
-                    <p class="txt-bold">$50</p>
-                    <p class="martop-0">per person</p>
-                  </div>
-                </div>
-                <div class="quantity-section">
-                  <div>
-                    <p class="quantity-text">Quantity</p>
-                  </div>
-                  <div class="quantity-button">
-                    <button class="btn border-color-qty">-</button>
-                    <p class="marleft-2">0</p>
-                    <button class="marleft-2 btn border-color-qty">+</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="ticket-desc">
-            <div class="left-text">
-              <p>Ticket Section</p>
-              <p>Quantity</p>
-              <p>Total Payment</p>
-            </div>
-            <div class="right-text">
-              <p>VIP</p>
-              <p>2</p>
-              <p>$70</p>
-            </div>
-          </div>
-          <div class="btn-payment">
-            <a class="shadow-lg shadow-[#61764B]" href="/payment.html"
-              >Checkout</a
-            >
+          <div>
+            <a href="/profile.html">John Tomson</a>
           </div>
         </div>
       </div>
-      <!-- Main Content End -->
-      <!-- Footer Start -->
-      <footer>
-        <div
-          class="flex flex-col md:items-center p-2.5 md:p-0 gap-12 md:gap-20 md:bg-[#E9EDC9]"
-        >
-          <div
-            class="flex md:flex-row flex-col md:justify-center gap-14 md:gap-32"
-          >
-            <div>
-              <div
-                class="flex items-center text-2xl mb-4 md:mb-8 font-semibold"
-              >
-                <img src="/assets/logo.png" alt="logo" />
-                <a href="/index.html">
-                  <span class="text-[#61764B]">We</span
-                  ><span class="text-[#FF3D71]">tick</span>
-                </a>
-              </div>
-              <div class="text-sm mb-4">Find events you love with our</div>
-              <div class="flex gap-4 text-[#C1C5D0]">
-                <a href="https://www.facebook.com">
-                  <i data-feather="facebook"></i>
-                </a>
-                <a href="https://www.whatsapp.com">
-                  <img src="/assets/whatsapp.png" alt="Whatsapp Icon" />
-                </a>
-                <a href="https://www.instagram.com">
-                  <i data-feather="instagram"></i>
-                </a>
-                <a href="https://www.twitter.com">
-                  <i data-feather="twitter"></i>
-                </a>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Main Content Start -->
+    <div class="wrapper">
+      <div class="banner">
+        <img src="/assets/banner.png" alt="banner" />
+      </div>
+      <div class="ticket-price">
+        <div class="header">
+          <div class="text-header">Tickets</div>
+          <div class="byprice">
+            <p class="text-byprice">BY PRICE</p>
+            <img class="icon" src="/assets/byprice-icon.png" alt="Icon" />
+          </div>
+        </div>
+        <div class="ticket-section">
+          <div class="reg">
+            <div class="box-logo">
+              <div>
+                <img
+                  class="logo-ticket"
+                  src="/assets/ticket1.png"
+                  alt="Ticket 1"
+                />
               </div>
             </div>
-            <div>
-              <ul class="flex flex-col gap-4">
-                <li class="font-semibold">Wetick</li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">About Us</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Features</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Blog</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Payments</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Mobile App</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul class="flex flex-col gap-4">
-                <li class="font-semibold">Features</li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Booking</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Create Event</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Discover</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Register</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul class="flex flex-col gap-4">
-                <li class="font-semibold">Company</li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Partnership</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Help</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Term of Service</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Privacy Policy</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Sitemap</a>
-                </li>
-              </ul>
+            <div class="box-ticket">
+              <div class="price-section">
+                <div class="left-section">
+                  <p class="txt-bold">SECTION REG, ROW 1</p>
+                  <p class="martop-0">12 Seats available</p>
+                </div>
+                <div class="right-section">
+                  <p class="txt-bold">$15</p>
+                  <p class="martop-0">per person</p>
+                </div>
+              </div>
+              <div class="quantity-section">
+                <div>
+                  <p class="quantity-text">Quantity</p>
+                </div>
+                <div class="quantity-button">
+                  <button class="btn border-color-qty">-</button>
+                  <p class="marleft-2">0</p>
+                  <button class="marleft-2 btn border-color-qty">+</button>
+                </div>
+              </div>
             </div>
           </div>
-          <p class="text-base font-semibold text-[#5A7184] md:w-[860px]">
-            © 2020 Wetick All Rights Reserved
-          </p>
+          <div class="vip">
+            <div class="box-logo">
+              <div>
+                <img
+                  class="logo-ticket"
+                  src="/assets/ticket2.png"
+                  alt="Ticket 2"
+                />
+              </div>
+            </div>
+            <div class="box-ticket">
+              <div class="price-section">
+                <div class="left-section">
+                  <p class="txt-bold">SECTION VIP, ROW 2</p>
+                  <p class="martop-0">9 Seats available</p>
+                </div>
+                <div class="right-section">
+                  <p class="txt-bold">$35</p>
+                  <p class="martop-0">per person</p>
+                </div>
+              </div>
+              <div class="quantity-section">
+                <div>
+                  <p class="quantity-text">Quantity</p>
+                </div>
+                <div class="quantity-button">
+                  <button class="btn border-color-qty">-</button>
+                  <p class="marleft-2">2</p>
+                  <button class="marleft-2 btn">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="vvip">
+            <div class="box-logo">
+              <div>
+                <img
+                  class="logo-ticket"
+                  src="/assets/ticket3.png"
+                  alt="Ticket 3"
+                />
+              </div>
+            </div>
+            <div class="box-ticket">
+              <div class="price-section">
+                <div class="left-section">
+                  <p class="txt-bold">SECTION VVIP, ROW 3</p>
+                  <p class="martop-0">6 Seats available</p>
+                </div>
+                <div class="right-section">
+                  <p class="txt-bold">$50</p>
+                  <p class="martop-0">per person</p>
+                </div>
+              </div>
+              <div class="quantity-section">
+                <div>
+                  <p class="quantity-text">Quantity</p>
+                </div>
+                <div class="quantity-button">
+                  <button class="btn border-color-qty">-</button>
+                  <p class="marleft-2">0</p>
+                  <button class="marleft-2 btn border-color-qty">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </footer>
-      <!-- Footer End -->
+        <div class="ticket-desc">
+          <div class="left-text">
+            <p>Ticket Section</p>
+            <p>Quantity</p>
+            <p>Total Payment</p>
+          </div>
+          <div class="right-text">
+            <p>VIP</p>
+            <p>2</p>
+            <p>$70</p>
+          </div>
+        </div>
+        <div class="btn-payment">
+          <a class="shadow-lg shadow-[#61764B]" href="/payment.html"
+            >Checkout</a
+          >
+        </div>
+      </div>
     </div>
+    <!-- Main Content End -->
+    <!-- Footer Start -->
+    <footer>
+      <div
+        class="flex flex-col md:items-center p-2.5 md:p-0 gap-12 md:gap-20 md:bg-[#E9EDC9]"
+      >
+        <div
+          class="flex md:flex-row flex-col md:justify-center gap-14 md:gap-32"
+        >
+          <div>
+            <div class="flex items-center text-2xl mb-4 md:mb-8 font-semibold">
+              <img src="/assets/logo.png" alt="logo" />
+              <a href="/index.html">
+                <span class="text-[#61764B]">We</span
+                ><span class="text-[#FF3D71]">tick</span>
+              </a>
+            </div>
+            <div class="text-sm mb-4">Find events you love with our</div>
+            <div class="flex gap-4 text-[#C1C5D0]">
+              <a href="https://www.facebook.com">
+                <i data-feather="facebook"></i>
+              </a>
+              <a href="https://www.whatsapp.com">
+                <img src="/assets/whatsapp.png" alt="Whatsapp Icon" />
+              </a>
+              <a href="https://www.instagram.com">
+                <i data-feather="instagram"></i>
+              </a>
+              <a href="https://www.twitter.com">
+                <i data-feather="twitter"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <ul class="flex flex-col gap-4">
+              <li class="font-semibold">Wetick</li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">About Us</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Features</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Blog</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Payments</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Mobile App</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="flex flex-col gap-4">
+              <li class="font-semibold">Features</li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Booking</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Create Event</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Discover</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Register</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="flex flex-col gap-4">
+              <li class="font-semibold">Company</li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Partnership</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Help</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Term of Service</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-base font-semibold text-[#5A7184] md:w-[860px]">
+          © 2020 Wetick All Rights Reserved
+        </p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+    <script src="script.js"></script>
     <script>
       feather.replace();
     </script>

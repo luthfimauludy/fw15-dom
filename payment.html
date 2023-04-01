@@ -150,12 +150,10 @@
       }
     </style>
   </head>
-  <body>
-    <div class="bg">
-      <!-- Navbar Start -->
-      <nav
-        class="flex md:flex-row flex-col md:h-24 px-8 bg-white font-semibold"
-      >
+  <body class="bg">
+    <!-- Navbar Start -->
+    <nav class="flex md:flex-row flex-col md:h-24 px-8 bg-white font-semibold">
+      <div class="flex md:justify-center justify-between items-center">
         <div class="flex justify-center items-center text-2xl">
           <img src="/assets/logo.png" alt="logo" />
           <div class="text-2xl">
@@ -166,226 +164,231 @@
           </div>
         </div>
         <div
-          class="flex md:flex-row flex-col flex-1 md:pl-8 mb-5 md:mb-0 text-sm"
+          class="md:hidden flex items-center border rounded-lg p-1 bg-[#61764B]"
         >
-          <ul class="flex justify-center md:flex-row flex-col flex-1 gap-3">
-            <li class="flex justify-center items-center min-w-[100px]">
-              <a
-                class="text-[#61764B] pb-2.5 border-b border-[#61764B]"
-                href="#home"
-                >Home</a
-              >
-            </li>
-            <li class="flex justify-center items-center min-w-[100px]">
-              <a
-                class="hover:text-[#61764B] pb-2.5 border-b border-transparent hover:border-[#61764B]"
-                href="/create-event.html"
-                >Create Event</a
-              >
-            </li>
-            <li class="flex justify-center items-center min-w-[100px]">
-              <a
-                class="hover:text-[#61764B] pb-2.5 border-b border-transparent hover:border-[#61764B]"
-                href="/event.html"
-                >Location</a
-              >
-            </li>
-          </ul>
+          <button id="btn-toggler">
+            <i class="text-white" data-feather="menu"></i>
+          </button>
+        </div>
+      </div>
+      <div
+        id="menu"
+        class="hidden md:flex md:flex-row flex-col flex-1 md:pl-8 mb-5 md:mb-0 text-sm"
+      >
+        <ul class="flex justify-center md:flex-row flex-col flex-1 gap-3">
+          <li class="flex justify-center items-center min-w-[100px]">
+            <a
+              class="hover:text-[#61764B] pb-2.5 border-b border-transparent hover:border-[#61764B]"
+              href="/index.html"
+              >Home</a
+            >
+          </li>
+          <li class="flex justify-center items-center min-w-[100px]">
+            <a
+              class="hover:text-[#61764B] pb-2.5 border-b border-transparent hover:border-[#61764B]"
+              href="/create-event.html"
+              >Create Event</a
+            >
+          </li>
+          <li class="flex justify-center items-center min-w-[100px]">
+            <a
+              class="hover:text-[#61764B] pb-2.5 border-b border-transparent hover:border-[#61764B]"
+              href="/event.html"
+              >Location</a
+            >
+          </li>
+        </ul>
+        <div
+          class="flex justify-center gap-3 items-center text-sm font-semibold"
+        >
           <div
-            class="flex justify-center gap-3 items-center text-sm font-semibold"
+            class="inline-block rounded-full p-[2px] bg-gradient-to-r from-[#61764B] to-[#A0D995]"
           >
-            <div
-              class="inline-block rounded-full p-[2px] bg-gradient-to-r from-[#61764B] to-[#A0D995]"
-            >
-              <img
-                class="w-11 h-11 object-cover rounded-full border-2 border-white"
-                src="/assets/profile3.jpg"
-                alt="Profile"
-              />
-            </div>
-            <div>
-              <a href="/profile.html">John Tomson</a>
-            </div>
+            <img
+              class="w-11 h-11 object-cover rounded-full border-2 border-white"
+              src="/assets/profile3.jpg"
+              alt="Profile"
+            />
           </div>
-        </div>
-      </nav>
-      <!-- Navbar End -->
-      <!-- Main Content Start -->
-      <div class="wrapper">
-        <div class="payment-method">
-          <div class="title">Payment Method</div>
-          <div class="payment-desc">
-            <div class="card">
-              <label>
-                <input type="radio" name="payments" checked />
-                <img src="/assets/card.png" alt="Card" />
-                <p>Card</p>
-                <button class="accordion">
-                  <img src="/assets/accordion2.png" alt="Accordion" />
-                </button>
-              </label>
-              <div class="atm">
-                <img src="/assets/atm.png" alt="ATM" />
-                <button class="button-atm">+</button>
-              </div>
-            </div>
-            <div class="bank">
-              <label>
-                <input type="radio" name="payments" />
-                <img src="/assets/bank.png" alt="Bank Transfer" />
-                <p>Bank Transfer</p>
-                <button class="accordion">
-                  <img src="/assets/accordion.png" alt="Accordion" />
-                </button>
-              </label>
-            </div>
-            <div class="retail">
-              <label>
-                <input type="radio" name="payments" />
-                <img src="/assets/retail.png" alt="Retail" />
-                <p>Retail</p>
-                <button class="accordion">
-                  <img src="/assets/accordion.png" alt="Accordion" />
-                </button>
-              </label>
-            </div>
-            <div class="e-money">
-              <label>
-                <input type="radio" name="payments" />
-                <img src="/assets/e-money.png" alt="E-Money" />
-                <p>E-Money</p>
-                <button class="accordion">
-                  <img src="/assets/accordion.png" alt="Accordion" />
-                </button>
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="ticket-detail">
-          <div class="title">Ticket Detail</div>
-          <div class="desc">
-            <div>Event</div>
-            <div class="right-desc">Slight & Sounds Exhibition</div>
-          </div>
-          <div class="desc">
-            <div>Ticket Section</div>
-            <div class="right-desc">VIP</div>
-          </div>
-          <div class="desc">
-            <div>Quantity</div>
-            <div class="right-desc">2</div>
-          </div>
-          <div class="desc">
-            <div>Total Payment</div>
-            <div class="right-desc">$70</div>
-          </div>
-          <div class="btn-payment">
-            <a class="shadow-lg shadow-[#61764B]" href="/profile.html"
-              >Payment</a
-            >
+          <div>
+            <a href="/profile.html">John Tomson</a>
           </div>
         </div>
       </div>
-      <!-- Main Content End -->
-      <!-- Footer Start -->
-      <footer>
-        <div
-          class="flex flex-col md:items-center p-2.5 md:p-0 gap-12 md:gap-20 md:bg-[#E9EDC9]"
-        >
-          <div
-            class="flex md:flex-row flex-col md:justify-center gap-14 md:gap-32"
-          >
-            <div>
-              <div
-                class="flex items-center text-2xl mb-4 md:mb-8 font-semibold"
-              >
-                <img src="/assets/logo.png" alt="logo" />
-                <a href="/index.html">
-                  <span class="text-[#61764B]">We</span
-                  ><span class="text-[#FF3D71]">tick</span>
-                </a>
-              </div>
-              <div class="text-sm mb-4">Find events you love with our</div>
-              <div class="flex gap-4 text-[#C1C5D0]">
-                <a href="https://www.facebook.com">
-                  <i data-feather="facebook"></i>
-                </a>
-                <a href="https://www.whatsapp.com">
-                  <img src="/assets/whatsapp.png" alt="Whatsapp Icon" />
-                </a>
-                <a href="https://www.instagram.com">
-                  <i data-feather="instagram"></i>
-                </a>
-                <a href="https://www.twitter.com">
-                  <i data-feather="twitter"></i>
-                </a>
-              </div>
-            </div>
-            <div>
-              <ul class="flex flex-col gap-4">
-                <li class="font-semibold">Wetick</li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">About Us</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Features</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Blog</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Payments</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Mobile App</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul class="flex flex-col gap-4">
-                <li class="font-semibold">Features</li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Booking</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Create Event</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Discover</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Register</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul class="flex flex-col gap-4">
-                <li class="font-semibold">Company</li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Partnership</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Help</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Term of Service</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Privacy Policy</a>
-                </li>
-                <li class="text-sm text-[#C1C5D0]">
-                  <a href="#">Sitemap</a>
-                </li>
-              </ul>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Main Content Start -->
+    <div class="wrapper">
+      <div class="payment-method">
+        <div class="title">Payment Method</div>
+        <div class="payment-desc">
+          <div class="card">
+            <label>
+              <input type="radio" name="payments" checked />
+              <img src="/assets/card.png" alt="Card" />
+              <p>Card</p>
+              <button class="accordion">
+                <img src="/assets/accordion2.png" alt="Accordion" />
+              </button>
+            </label>
+            <div class="atm">
+              <img src="/assets/atm.png" alt="ATM" />
+              <button class="button-atm">+</button>
             </div>
           </div>
-          <p class="text-base font-semibold text-[#5A7184] md:w-[860px]">
-            © 2020 Wetick All Rights Reserved
-          </p>
+          <div class="bank">
+            <label>
+              <input type="radio" name="payments" />
+              <img src="/assets/bank.png" alt="Bank Transfer" />
+              <p>Bank Transfer</p>
+              <button class="accordion">
+                <img src="/assets/accordion.png" alt="Accordion" />
+              </button>
+            </label>
+          </div>
+          <div class="retail">
+            <label>
+              <input type="radio" name="payments" />
+              <img src="/assets/retail.png" alt="Retail" />
+              <p>Retail</p>
+              <button class="accordion">
+                <img src="/assets/accordion.png" alt="Accordion" />
+              </button>
+            </label>
+          </div>
+          <div class="e-money">
+            <label>
+              <input type="radio" name="payments" />
+              <img src="/assets/e-money.png" alt="E-Money" />
+              <p>E-Money</p>
+              <button class="accordion">
+                <img src="/assets/accordion.png" alt="Accordion" />
+              </button>
+            </label>
+          </div>
         </div>
-      </footer>
-      <!-- Footer End -->
+      </div>
+      <div class="ticket-detail">
+        <div class="title">Ticket Detail</div>
+        <div class="desc">
+          <div>Event</div>
+          <div class="right-desc">Slight & Sounds Exhibition</div>
+        </div>
+        <div class="desc">
+          <div>Ticket Section</div>
+          <div class="right-desc">VIP</div>
+        </div>
+        <div class="desc">
+          <div>Quantity</div>
+          <div class="right-desc">2</div>
+        </div>
+        <div class="desc">
+          <div>Total Payment</div>
+          <div class="right-desc">$70</div>
+        </div>
+        <div class="btn-payment">
+          <a class="shadow-lg shadow-[#61764B]" href="/profile.html">Payment</a>
+        </div>
+      </div>
     </div>
+    <!-- Main Content End -->
+    <!-- Footer Start -->
+    <footer>
+      <div
+        class="flex flex-col md:items-center p-2.5 md:p-0 gap-12 md:gap-20 md:bg-[#E9EDC9]"
+      >
+        <div
+          class="flex md:flex-row flex-col md:justify-center gap-14 md:gap-32"
+        >
+          <div>
+            <div class="flex items-center text-2xl mb-4 md:mb-8 font-semibold">
+              <img src="/assets/logo.png" alt="logo" />
+              <a href="/index.html">
+                <span class="text-[#61764B]">We</span
+                ><span class="text-[#FF3D71]">tick</span>
+              </a>
+            </div>
+            <div class="text-sm mb-4">Find events you love with our</div>
+            <div class="flex gap-4 text-[#C1C5D0]">
+              <a href="https://www.facebook.com">
+                <i data-feather="facebook"></i>
+              </a>
+              <a href="https://www.whatsapp.com">
+                <img src="/assets/whatsapp.png" alt="Whatsapp Icon" />
+              </a>
+              <a href="https://www.instagram.com">
+                <i data-feather="instagram"></i>
+              </a>
+              <a href="https://www.twitter.com">
+                <i data-feather="twitter"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <ul class="flex flex-col gap-4">
+              <li class="font-semibold">Wetick</li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">About Us</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Features</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Blog</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Payments</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Mobile App</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="flex flex-col gap-4">
+              <li class="font-semibold">Features</li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Booking</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Create Event</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Discover</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Register</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="flex flex-col gap-4">
+              <li class="font-semibold">Company</li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Partnership</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Help</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Term of Service</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-base font-semibold text-[#5A7184] md:w-[860px]">
+          © 2020 Wetick All Rights Reserved
+        </p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+    <script src="script.js"></script>
     <script>
       feather.replace();
     </script>
