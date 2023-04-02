@@ -14,20 +14,23 @@
       rel="stylesheet"
     />
 
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
     <!-- Manual styling -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
   <body>
     <div class="wrapper">
       <div class="img-section">
         <div class="holder">
-          <img class="banner1" src="/assets/toyFaces.png" alt="Toy Faces" />
+          <img class="banner1" src="/assets/img/toyFaces.png" alt="Toy Faces" />
           <div class="dissolve"></div>
         </div>
       </div>
       <div class="form-section">
         <div class="flex">
-          <img class="logo" src="/assets/logo.png" alt="logo" />
+          <img class="logo" src="/assets/img/logo.png" alt="logo" />
           <div class="logo-text">
             <span class="we-text">We</span><span class="tick-text">tick</span>
           </div>
@@ -48,14 +51,14 @@
             <div class="toggleable-password">
               <input id="password" type="password" placeholder="Password" />
               <button>
-                <img src="/assets/eye.png" />
+                <i data-feather="eye"></i>
               </button>
             </div>
             <div class="forgot-password">
               <a href="/forgot-password.html">Forgot Password?</a>
             </div>
-            <div id="buttonWrapper" class="submit">
-              <button id="myBtn" type="submit">Sign In</button>
+            <div class="submit">
+              <button type="submit">Sign In</button>
             </div>
           </form>
         </div>
@@ -65,14 +68,14 @@
             <div class="btn-google">
               <a href="https://www.google.com">
                 <button>
-                  <img src="/assets/google.png" alt="google" />
+                  <img src="/assets/img/google.png" alt="google" />
                 </button>
               </a>
             </div>
             <div class="btn-facebook">
               <a href="https://www.facebook.com">
                 <button>
-                  <img src="/assets/facebook.png" alt="facebook" />
+                  <img src="/assets/img/facebook.png" alt="facebook" />
                 </button>
               </a>
             </div>
@@ -81,6 +84,9 @@
       </div>
       <div></div>
     </div>
-    <script src="script.js"></script>
+    <script src="/assets/js/signin.js"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

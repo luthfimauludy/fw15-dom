@@ -14,20 +14,23 @@
       rel="stylesheet"
     />
 
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
     <!-- Manual Styling -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
   <body>
     <div class="wrapper">
       <div class="img-section">
         <div class="holder">
-          <img class="banner1" src="/assets/toyFaces.png" alt="Toy Faces" />
+          <img class="banner1" src="/assets/img/toyFaces.png" alt="Toy Faces" />
           <div class="dissolve"></div>
         </div>
       </div>
       <div class="form-section">
         <div class="flex">
-          <img class="logo" src="/assets/logo.png" alt="logo" />
+          <img class="logo" src="/assets/img/logo.png" alt="logo" />
           <div class="logo-text">
             <span class="we-text">We</span><span class="tick-text">tick</span>
           </div>
@@ -41,8 +44,9 @@
         </div>
         <div>
           <form id="signup">
+            <div id="alert"></div>
             <div>
-              <input id="username" type="text" placeholder="Full Name" />
+              <input id="name" type="text" placeholder="Full Name" />
             </div>
             <div>
               <input id="email" type="email" placeholder="Email" />
@@ -50,17 +54,17 @@
             <div class="toggleable-password">
               <input id="password" type="password" placeholder="Password" />
               <button>
-                <img src="/assets/eye.png" />
+                <i data-feather="eye"></i>
               </button>
             </div>
             <div class="toggleable-password">
               <input
-                id="confirmPassword"
+                id="confirm-password"
                 type="password"
                 placeholder="Confirm Password"
               />
               <button>
-                <img src="/assets/eye.png" />
+                <i data-feather="eye"></i>
               </button>
             </div>
             <div class="checkbox">
@@ -70,7 +74,7 @@
                 Accept terms and condition
               </label>
             </div>
-            <div id="buttonWrapper" class="submit">
+            <div class="submit">
               <button type="submit">Sign Up</button>
             </div>
           </form>
@@ -78,6 +82,9 @@
       </div>
       <div></div>
     </div>
-    <script src="script.js"></script>
+    <script src="/assets/js/signup.js"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

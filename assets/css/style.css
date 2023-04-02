@@ -27,7 +27,6 @@ body {
   width: 400px;
 }
 .form-section {
-  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -191,7 +190,14 @@ input[type="checkbox"]:checked ~ .checkmarking::after {
     display: none;
   }
   .form-section {
+    width: 100%;
     justify-content: start;
     padding: 0 10px;
+  }
+  .toggleable-password {
+    width: 100%;
+  }
+  .submit button {
+    width: 100%;
   }
 }
