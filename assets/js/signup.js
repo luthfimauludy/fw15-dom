@@ -38,15 +38,15 @@ formPassword.addEventListener("keyup", function (event) {
   }
 });
 
-const formConfirmPassword = document.getElementById("confirm-password");
+const formConfirmPassword = document.getElementById("confirmPassword");
 
 formConfirmPassword.addEventListener("keyup", function (event) {
   if (event.target.value === "") {
-    document.getElementById("confirm-password").style.borderColor = "#c1c5d0";
+    document.getElementById("confirmPassword").style.borderColor = "#c1c5d0";
   } else if (!(event.target.value.length >= 8)) {
-    document.getElementById("confirm-password").style.borderColor = "red";
+    document.getElementById("confirmPassword").style.borderColor = "red";
   } else {
-    document.getElementById("confirm-password").style.borderColor = "green";
+    document.getElementById("confirmPassword").style.borderColor = "green";
   }
 });
 
@@ -65,14 +65,24 @@ formSignUp.addEventListener("submit", function (event) {
     password === "" &&
     confirmPassword === ""
   ) {
-    window.location = "/signin.html";
-  } else {
     document.getElementById("alert").style.color = "red";
-    document.getElementById("name").style.borderColor = "#c1c5d0";
-    document.getElementById("email").style.borderColor = "#c1c5d0";
-    document.getElementById("password").style.borderColor = "#c1c5d0";
-    document.getElementById("confirm-password").style.borderColor = "#c1c5d0";
-    textAlert.innerText = "Login Failed!";
+    textAlert.innerText = "Data cannot be empty!";
     formSignUp.reset();
+  } else {
+    if (name === "") {
+      document.getElementById("alert").style.color = "red";
+      textAlert.innerText = "Name cannot be empty!";
+    } else if (email === "") {
+      document.getElementById("alert").style.color = "red";
+      textAlert.innerText = "Email cannot be empty!";
+    } else if (password === "") {
+      document.getElementById("alert").style.color = "red";
+      textAlert.innerText = "Password cannot be empty!";
+    } else if (confirmPassword === "") {
+      document.getElementById("alert").style.color = "red";
+      textAlert.innerText = "Confirm Password cannot be empty!";
+    } else {
+      window.location = "/signin.html";
+    }
   }
 });
