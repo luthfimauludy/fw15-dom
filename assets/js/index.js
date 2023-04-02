@@ -12,32 +12,32 @@ const dataArray = [
   {
     image: "/assets/img/event-banner3.jpg",
     date: "Thu, 16 Nov, 4:00 PM",
-    title: "Sights & Sounds Exhibition",
+    title: "See it in Bronze Class",
   },
   {
     image: "/assets/img/event-banner4.jpg",
     date: "Thu, 16 Nov, 7:00 PM",
-    title: "See it in Gold Class",
+    title: "See it in Silver Class",
   },
   {
     image: "/assets/img/event-banner5.jpg",
     date: "Fri, 17 Nov, 4:00 PM",
-    title: "Sights & Sounds Exhibition",
+    title: "See it in Premium Class",
   },
   {
     image: "/assets/img/event-banner6.jpg",
     date: "Fri, 17 Nov, 7:00 PM",
-    title: "See it in Gold Class",
+    title: "See it in Platinum Class",
   },
   {
     image: "/assets/img/event-banner7.jpg",
-    date: "Sat, 18 Nov, 4:00 PM",
-    title: "Sights & Sounds Exhibition",
+    date: "Mon, 13 Nov, 4:00 PM",
+    title: "See it in Regular Class",
   },
   {
     image: "/assets/img/event-banner8.jpg",
-    date: "Sat, 18 Nov, 7:00 PM",
-    title: "See it in Gold Class",
+    date: "Mon, 13 Nov, 7:00 PM",
+    title: "See it in Exclusive Class",
   },
 ];
 
