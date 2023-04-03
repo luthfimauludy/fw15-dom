@@ -99,7 +99,6 @@ dataArray.map((data) => {
   </div>
   `;
 });
-console.log(dataEvents);
 const eventWrapper = document.getElementById("eventWrapper");
 eventWrapper.innerHTML = dataEvents;
 
@@ -115,3 +114,19 @@ btnToggler.addEventListener("click", function () {
     token.add("hidden");
   }
 });
+
+const node = document.createElement("div");
+const city = document.createElement("img");
+const paragraph = document.createElement("p");
+const text = document.createTextNode("Bogor");
+node.classList.add("text-white");
+node.classList.add("mt-5");
+city.setAttribute("src", "/assets/img/city8.jpg");
+city.classList.add("w-60");
+city.classList.add("rounded-xl");
+
+node.appendChild(city);
+node.appendChild(paragraph);
+node.appendChild(text);
+
+document.getElementById("newCity").appendChild(node);
